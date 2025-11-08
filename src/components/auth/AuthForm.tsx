@@ -83,7 +83,7 @@ export default function AuthForm() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-white px-4 py-12">
+    <div className="min-h-screen flex items-center justify-center bg-cyan-50 px-4 py-12">
       <div className="w-full max-w-md space-y-8">
         <div className="text-center space-y-4">
           <h1 className="text-4xl font-black tracking-tight">Every<span className="text-primary">Dollar</span></h1>

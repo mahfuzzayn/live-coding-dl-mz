@@ -21,7 +21,7 @@ const Home = () => {
   }
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-cyan-50">
       <Navbar />
       <main className="container py-12 mx-auto px-6">
         <ManageExpenses />

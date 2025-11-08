@@ -163,7 +163,7 @@ const Visuals = () => {
     }
 
     return (
-        <div className="min-h-screen bg-white">
+        <div className="min-h-screen bg-cyan-50">
             <Navbar />
             <main className="container py-12 px-6 space-y-8 mx-auto">
                 <div className="space-y-2">
