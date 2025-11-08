@@ -62,7 +62,7 @@ export async function GET(
 // PUT route - Update an expense
 export async function PUT(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectDB();
@@ -75,7 +75,7 @@ export async function PUT(
 
     // Find expense and verify ownership
     const expense = await Expense.findOne({
-      _id: params.id,
+      _id: (await params).id,
       userId: user.userId,
     });
 
@@ -177,7 +177,7 @@ export async function PUT(
 // DELETE route - Delete an expense
 export async function DELETE(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  { params }: { params: Promise<{ id: string }> }
 ) {
   try {
     await connectDB();
@@ -186,7 +186,7 @@ export async function DELETE(
     const user = verifyAuth(request);
 
     const expense = await Expense.findOneAndDelete({
-      _id: params.id,
+      _id: (await params).id,
       userId: user.userId,
     });
 

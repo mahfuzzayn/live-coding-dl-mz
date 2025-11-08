@@ -85,16 +85,9 @@ const AddExpense = () => {
   };
 
   return (
-    <div className="w-full max-w-2xl mx-auto p-6 space-y-6">
-      <div>
-        <h2 className="text-2xl font-bold">Add New Expense</h2>
-        <p className="text-muted-foreground mt-1">
-          Track your expenses to manage your budget better
-        </p>
-      </div>
-
+    <div className="w-full space-y-4">
       <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
+        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">
           <FormField
             control={form.control}
             name="title"
@@ -112,7 +105,7 @@ const AddExpense = () => {
             )}
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormField
               control={form.control}
               name="category"

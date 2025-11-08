@@ -1,7 +1,6 @@
 "use client";
 
 import { useAuth } from "@/contexts/AuthContext";
-import AddExpense from "@/components/modules/expense/AddExpense";
 import ManageExpenses from "@/components/modules/expense/ManageExpenses";
 import AuthForm from "@/components/auth/AuthForm";
 import Navbar from "@/components/layout/Navbar";
@@ -22,7 +21,7 @@ const HomePage = () => {
   }
 
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-background container mx-auto">
       <Navbar />
       <main className="container py-8">
         <div className="mt-8">
